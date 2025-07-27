@@ -1,0 +1,32 @@
+{
+  "name": "profile_tracker",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "node index.js",
+    "deploy": "zip -r function.zip . -x 'node_modules/.cache/*' 'test/*' '*.git*'",
+    "clean": "rm -rf node_modules package-lock.json",
+    "install-production": "npm install --production"
+  },
+  "dependencies": {
+    "@sparticuz/chromium": "^138.0.2",
+    "@supabase/supabase-js": "^2.0.0",
+    "axios": "^1.10.0",
+    "cheerio": "^1.1.0",
+    "dotenv": "^16.0.0",
+    "nodemailer": "^7.0.5",
+    "playwright-aws-lambda": "^0.11.0",
+    "puppeteer-core": "^24.15.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "keywords": [
+    "aws-lambda",
+    "puppeteer",
+    "web-scraping",
+    "coding-profiles",
+    "email-automation"
+  ]
+}
